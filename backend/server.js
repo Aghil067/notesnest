@@ -5,6 +5,11 @@ const { MongoClient } = require('mongodb');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
+app.use(cors({
+  origin: ['https://notesnest-dhp8.vercel.app'],
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
 dotenv.config();
 
 const url = process.env.MONGODB_CONNECT_URI;

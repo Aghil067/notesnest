@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { v4 as uuidv4 } from 'uuid';
 
-const Notes = () => {
+const Page = () => {
   const [form, setForm] = useState({
     title: "",
     notes: ""
@@ -102,4 +102,4 @@ const Notes = () => {
   );
 };
 
-export default Notes;
+export default Page;

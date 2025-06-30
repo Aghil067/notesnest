@@ -23,7 +23,7 @@ const Notes = () => {
     const createdAt = new Date().toISOString();
     const newEntry = { ...form, id, createdAt };
 
-    await fetch("http://localhost:3000/", {
+    await fetch("http://localhost:8080/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newEntry),

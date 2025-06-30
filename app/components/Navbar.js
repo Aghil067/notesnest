@@ -14,8 +14,8 @@ const Navbar = () => {
 
       <div className="space-x-8 text-sm font-medium text-slate-200">
         <Link href="/" className="hover:text-sky-400 transition duration-300">Home</Link>
-        <Link href="/about" className="hover:text-sky-400 transition duration-300">About</Link>
-        <Link href="/contact" className="hover:text-sky-400 transition duration-300">Contact</Link>
+        <Link href="/" className="hover:text-sky-400 transition duration-300">About</Link>
+        <Link href="/" className="hover:text-sky-400 transition duration-300">Contact</Link>
       </div>
     </nav>
   );

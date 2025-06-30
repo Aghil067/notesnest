@@ -23,7 +23,7 @@ const Notes = () => {
     const createdAt = new Date().toISOString();
     const newEntry = { ...form, id, createdAt };
 
-    await fetch("https://notesnest-qztq.onrender.com", {
+    await fetch("https://notesnest-qztq.onrender.com/api/notes", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newEntry),

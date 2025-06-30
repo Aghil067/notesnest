@@ -18,14 +18,14 @@ app.use(bodyParser.json());
 
 client.connect();
 
-app.get('/', async (req, res) => {
+app.get('/api/notes', async (req, res) => {
   const db = client.db(dbName);
   const collection = db.collection('notes');
   const findResult = await collection.find({}).toArray();
   res.json(findResult);
 });
 
-app.post('/', async (req, res) => {
+app.post('/api/notes', async (req, res) => {
   const notes = { ...req.body, createdAt: new Date().toISOString() };
   const db = client.db(dbName);
   const collection = db.collection('notes');

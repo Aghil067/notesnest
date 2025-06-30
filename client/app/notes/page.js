@@ -11,7 +11,7 @@ const Notes = () => {
     notes: ""
   })
   const [notesArray, setNotesArray] = useState([]);
-  
+
   const handleChange = (e) => {
     setForm({
       ...form,
@@ -23,11 +23,12 @@ const Notes = () => {
     const createdAt = new Date().toISOString();
     const newEntry = { ...form, id, createdAt };
 
-    await fetch("https://notesnest-qztq.onrender.com/api/notes", {
+    await fetch("https://notesnest-tki8.onrender.com/api/notes", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newEntry),
     });
+
     setNotesArray([...notesArray, newEntry]);
     setForm({ title: "", notes: "" });
 

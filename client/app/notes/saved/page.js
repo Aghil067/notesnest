@@ -6,7 +6,7 @@ const Page = () => {
   const [notesArray, setNotesArray] = useState([]);
   const getNotes = async () => {
     try {
-      const req = await fetch("https://notesnest-qztq.onrender.com/api/notes");
+      const res = await fetch("https://notesnest-tki8.onrender.com/api/notes");
       const notes = await req.json();
       console.log("Fetched Notes:", notes);
       setNotesArray(notes);

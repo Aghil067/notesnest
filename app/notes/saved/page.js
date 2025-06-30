@@ -4,11 +4,9 @@ import Link from 'next/link';
 
 const Page = () => {
   const [notesArray, setNotesArray] = useState([]);
-
-  // Fetch saved notes from backend
   const getNotes = async () => {
     try {
-      const req = await fetch("http://localhost:8080/"); // Or your actual backend route
+      const req = await fetch("https://notesnest-qztq.onrender.com");
       const notes = await req.json();
       console.log("Fetched Notes:", notes);
       setNotesArray(notes);

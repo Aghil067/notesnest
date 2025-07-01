@@ -7,7 +7,7 @@ const Page = () => {
   const getNotes = async () => {
     try {
       const res = await fetch("https://notesnest-tki8.onrender.com/api/notes");
-      const notes = await req.json();
+      const notes = await res.json();
       console.log("Fetched Notes:", notes);
       setNotesArray(notes);
     } catch (error) {

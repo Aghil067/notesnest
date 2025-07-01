@@ -12,7 +12,7 @@ const dbName = 'notesApp';
 const PORT = process.env.PORT || 3001;
 
 app.use(cors({
-  origin: 'https://notesnest-dhp8.vercel.app',
+  origin: 'https://notesnest-gules.vercel.app',
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type'],
 }));
